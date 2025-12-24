@@ -2,7 +2,7 @@
 
 A curated collection of Claude agents from various repositories and sources.
 
-**Last updated:** 2025-12-24 03:01 UTC
+**Last updated:** 2025-12-24 03:08 UTC
 
 ## Agent Repositories
 
@@ -10,6 +10,7 @@ A curated collection of Claude agents from various repositories and sources.
 |------------|-------------|---------|
 | [iannuttall/claude-agents](https://github.com/iannuttall/claude-agents) | [iannuttall/claude-agents](https://github.com/iannuttall/claude-agents) | ✅ |
 | [diet103/claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase) | [diet103/claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase) | ✅ |
+| [vijaythecoder/awesome-claude-agents](https://github.com/vijaythecoder/awesome-claude-agents) | [vijaythecoder/awesome-claude-agents](https://github.com/vijaythecoder/awesome-claude-agents) | ✅ |
 
 ## General
 
