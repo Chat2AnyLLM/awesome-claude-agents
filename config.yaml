@@ -8,6 +8,12 @@ agent_sources:
     priority: 1
     timeout: 30
 
+  - id: "awesome-repo-configs"
+    url: "https://raw.githubusercontent.com/Chat2AnyLLM/awesome-repo-configs/main/agent_repos.json"
+    enabled: true
+    priority: 2
+    timeout: 30
+
   # Additional sources can be added here - for example, you could create your own
   # agent_repos.json file or point to other repositories that follow the same format
 
