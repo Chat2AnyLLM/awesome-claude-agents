@@ -1,0 +1,33 @@
+version: "1.0"
+
+# Agent repository sources - points to agent_repos.json files from various sources
+agent_sources:
+  - id: "code-assistant-manager"
+    url: "https://raw.githubusercontent.com/Chat2AnyLLM/code-assistant-manager/main/code_assistant_manager/agent_repos.json"
+    enabled: true
+    priority: 1
+    timeout: 30
+
+  # Additional sources can be added here - for example, you could create your own
+  # agent_repos.json file or point to other repositories that follow the same format
+
+# Additional agent repositories can be added here in the same format as agent_repos.json
+additional_agent_repos:
+  # Example: Add more agent repositories here
+  # "custom-agent-repo": {
+  #   "owner": "username",
+  #   "name": "repo-name",
+  #   "branch": "main",
+  #   "enabled": true,
+  #   "agentsPath": "agents"
+  # }
+
+# Generation settings
+generation:
+  output_file: "README.md"
+  include_agent_categories: true
+  include_repository_tables: true
+
+# Logging settings
+logging:
+  level: "INFO"
