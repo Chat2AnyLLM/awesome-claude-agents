@@ -2,7 +2,7 @@
 
 A curated collection of Claude agents from various repositories and sources.
 
-**Last updated:** 2025-12-24 03:16 UTC
+**Last updated:** 2025-12-24 03:27 UTC
 
 ## Agent Repositories
 
@@ -11,18 +11,12 @@ A curated collection of Claude agents from various repositories and sources.
 | [iannuttall/claude-agents](https://github.com/iannuttall/claude-agents) | [iannuttall/claude-agents](https://github.com/iannuttall/claude-agents) |
 | [diet103/claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase) | [diet103/claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase) |
 | [vijaythecoder/awesome-claude-agents](https://github.com/vijaythecoder/awesome-claude-agents) | [vijaythecoder/awesome-claude-agents](https://github.com/vijaythecoder/awesome-claude-agents) |
+| [wshobson/agents](https://github.com/wshobson/agents) | [wshobson/agents](https://github.com/wshobson/agents) |
 
 ## General
 
 | Agent | Description | Repository |
 |-------|-------------|------------|
-| [Code Refactorer](https://github.com/iannuttall/claude-agents/blob/main/agents/code-refactorer.md) | --- name: code-refactorer description: Use this agent when you need to improve existing code structu... | [iannuttall/claude-agents](https://github.com/iannuttall/claude-agents) |
-| [Content Writer](https://github.com/iannuttall/claude-agents/blob/main/agents/content-writer.md) | --- name: content-writer description: Use this agent when you need to create compelling, informative... | [iannuttall/claude-agents](https://github.com/iannuttall/claude-agents) |
-| [Frontend Designer](https://github.com/iannuttall/claude-agents/blob/main/agents/frontend-designer.md) | --- name: frontend-designer description: Use this agent when you need to convert design mockups, wir... | [iannuttall/claude-agents](https://github.com/iannuttall/claude-agents) |
-| [Prd Writer](https://github.com/iannuttall/claude-agents/blob/main/agents/prd-writer.md) | --- name: prd-writer description: Use this agent when you need to create a comprehensive Product Req... | [iannuttall/claude-agents](https://github.com/iannuttall/claude-agents) |
-| [Project Task Planner](https://github.com/iannuttall/claude-agents/blob/main/agents/project-task-planner.md) | --- name: project-task-planner description: Use this agent when you need to create a comprehensive d... | [iannuttall/claude-agents](https://github.com/iannuttall/claude-agents) |
-| [Security Auditor](https://github.com/iannuttall/claude-agents/blob/main/agents/security-auditor.md) | --- name: security-auditor description: Use this agent when you need to perform a comprehensive secu... | [iannuttall/claude-agents](https://github.com/iannuttall/claude-agents) |
-| [Vibe Coding Coach](https://github.com/iannuttall/claude-agents/blob/main/agents/vibe-coding-coach.md) | --- name: vibe-coding-coach description: Use this agent when users want to build applications throug... | [iannuttall/claude-agents](https://github.com/iannuttall/claude-agents) |
 | [Agents](https://github.com/diet103/claude-code-infrastructure-showcase/blob/main/.claude/agents/README.md) | Specialized agents for complex, multi-step tasks. | [diet103/claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase) |
 | [Auth Route Debugger](https://github.com/diet103/claude-code-infrastructure-showcase/blob/main/.claude/agents/auth-route-debugger.md) | --- name: auth-route-debugger description: Use this agent when you need to debug authentication-rela... | [diet103/claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase) |
 | [Auth Route Tester](https://github.com/diet103/claude-code-infrastructure-showcase/blob/main/.claude/agents/auth-route-tester.md) | --- name: auth-route-tester description: Use this agent when you need to test routes after implement... | [diet103/claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase) |
@@ -34,6 +28,13 @@ A curated collection of Claude agents from various repositories and sources.
 | [Plan Reviewer](https://github.com/diet103/claude-code-infrastructure-showcase/blob/main/.claude/agents/plan-reviewer.md) | --- name: plan-reviewer description: Use this agent when you have a development plan that needs thor... | [diet103/claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase) |
 | [Refactor Planner](https://github.com/diet103/claude-code-infrastructure-showcase/blob/main/.claude/agents/refactor-planner.md) | --- name: refactor-planner description: Use this agent when you need to analyze code structure and c... | [diet103/claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase) |
 | [Web Research Specialist](https://github.com/diet103/claude-code-infrastructure-showcase/blob/main/.claude/agents/web-research-specialist.md) | --- name: web-research-specialist description: Use this agent when you need to research information... | [diet103/claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase) |
+| [Code Refactorer](https://github.com/iannuttall/claude-agents/blob/main/agents/code-refactorer.md) | --- name: code-refactorer description: Use this agent when you need to improve existing code structu... | [iannuttall/claude-agents](https://github.com/iannuttall/claude-agents) |
+| [Content Writer](https://github.com/iannuttall/claude-agents/blob/main/agents/content-writer.md) | --- name: content-writer description: Use this agent when you need to create compelling, informative... | [iannuttall/claude-agents](https://github.com/iannuttall/claude-agents) |
+| [Frontend Designer](https://github.com/iannuttall/claude-agents/blob/main/agents/frontend-designer.md) | --- name: frontend-designer description: Use this agent when you need to convert design mockups, wir... | [iannuttall/claude-agents](https://github.com/iannuttall/claude-agents) |
+| [Prd Writer](https://github.com/iannuttall/claude-agents/blob/main/agents/prd-writer.md) | --- name: prd-writer description: Use this agent when you need to create a comprehensive Product Req... | [iannuttall/claude-agents](https://github.com/iannuttall/claude-agents) |
+| [Project Task Planner](https://github.com/iannuttall/claude-agents/blob/main/agents/project-task-planner.md) | --- name: project-task-planner description: Use this agent when you need to create a comprehensive d... | [iannuttall/claude-agents](https://github.com/iannuttall/claude-agents) |
+| [Security Auditor](https://github.com/iannuttall/claude-agents/blob/main/agents/security-auditor.md) | --- name: security-auditor description: Use this agent when you need to perform a comprehensive secu... | [iannuttall/claude-agents](https://github.com/iannuttall/claude-agents) |
+| [Vibe Coding Coach](https://github.com/iannuttall/claude-agents/blob/main/agents/vibe-coding-coach.md) | --- name: vibe-coding-coach description: Use this agent when users want to build applications throug... | [iannuttall/claude-agents](https://github.com/iannuttall/claude-agents) |
 | [Code Archaeologist](https://github.com/vijaythecoder/awesome-claude-agents/blob/main/agents/core/code-archaeologist.md) | --- name: code-archaeologist description: MUST BE USED to explore and document unfamiliar, legacy, o... | [vijaythecoder/awesome-claude-agents](https://github.com/vijaythecoder/awesome-claude-agents) |
 | [Code Reviewer](https://github.com/vijaythecoder/awesome-claude-agents/blob/main/agents/core/code-reviewer.md) | --- name: code-reviewer description: MUST BE USED to run a rigorous, security-aware review after eve... | [vijaythecoder/awesome-claude-agents](https://github.com/vijaythecoder/awesome-claude-agents) |
 | [Documentation Specialist](https://github.com/vijaythecoder/awesome-claude-agents/blob/main/agents/core/documentation-specialist.md) | --- name: documentation-specialist description: MUST BE USED to craft or update project documentatio... | [vijaythecoder/awesome-claude-agents](https://github.com/vijaythecoder/awesome-claude-agents) |
