@@ -8,6 +8,11 @@ import json
 import logging
 import time
 import hashlib
+import yaml
+import subprocess
+import tempfile
+import shutil
+import os
 from typing import Dict, Any, Optional, List
 from urllib.parse import urljoin
 
@@ -106,65 +111,6 @@ class Fetcher:
         logger.info("Fetched %d agent repositories from %s", len(repos), url)
         return repos
 
-    def fetch_agent_manifest(self, repo_owner: str, repo_name: str,
-                           repo_branch: str = "main", agents_path: str = "agents") -> Optional[Dict[str, Any]]:
-        """Fetch agents from a GitHub repository.
-
-        Looks for agent files in the specified agents path and recursively searches subdirectories.
-        """
-        # Try multiple branch names in order of popularity
-        branch_attempts = [repo_branch]
-        if repo_branch == "main":
-            branch_attempts.extend(["master", "develop", "development", "dev"])
-        elif repo_branch == "master":
-            branch_attempts.extend(["main", "develop", "development", "dev"])
-
-        for attempt_branch in branch_attempts:
-            # Recursively fetch all agent files
-            agent_files = self._fetch_agent_files_recursive(repo_owner, repo_name, agents_path, attempt_branch)
-
-            if agent_files:
-                logger.info(f"Successfully fetched agent files from {repo_owner}/{repo_name}")
-                return {'agent_files': agent_files}
-
-        logger.warning(f"No valid agent directory found in {repo_owner}/{repo_name}")
-        return None
-
-    def _fetch_agent_files_recursive(self, repo_owner: str, repo_name: str, path: str, branch: str) -> List[Dict[str, Any]]:
-        """Recursively fetch all .md files from a directory and its subdirectories."""
-        agent_files = []
-
-        # Get contents of current directory
-        api_url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/contents/{path}?ref={branch}"
-        try:
-            logger.debug(f"Fetching directory contents from {api_url}")
-            response = self.session.get(api_url, timeout=self.timeout)
-            response.raise_for_status()
-
-            contents = response.json()
-            if isinstance(contents, list):
-                for item in contents:
-                    item_type = item.get('type')
-                    item_path = item.get('path')
-                    item_name = item.get('name', '')
-
-                    if item_type == 'file' and item_name.endswith('.md'):
-                        # Found an agent file
-                        agent_files.append({
-                            'name': item_name,
-                            'path': item_path,
-                            'download_url': item.get('download_url')
-                        })
-                    elif item_type == 'dir':
-                        # Recursively search subdirectory
-                        subdirectory_files = self._fetch_agent_files_recursive(repo_owner, repo_name, item_path, branch)
-                        agent_files.extend(subdirectory_files)
-
-        except requests.exceptions.RequestException as e:
-            logger.debug(f"Failed to fetch directory {path} from branch {branch}: {e}")
-
-        return agent_files
-
     def _validate_agent_index(self, data: Dict[str, Any]) -> bool:
         """Validate agent index structure."""
         if not isinstance(data, dict):
@@ -183,7 +129,7 @@ class Fetcher:
         return False
 
     def fetch_agents_from_repo(self, repo_data: Dict[str, Any]) -> List[Dict[str, Any]]:
-        """Fetch all agents from a repository."""
+        """Fetch all agents from a repository using git clone."""
         agents = []
 
         repo_owner = repo_data.get("owner")
@@ -195,91 +141,161 @@ class Fetcher:
             logger.warning("Missing repo information: %s", repo_data.get("id"))
             return agents
 
-        # Fetch agent manifest (directory listing)
-        agent_manifest = self.fetch_agent_manifest(repo_owner, repo_name, repo_branch, agents_path)
-
-        if not agent_manifest:
-            logger.warning("No agent manifest found for %s/%s", repo_owner, repo_name)
-            return agents
-
-        # Extract agent files and fetch their content
-        agent_files = agent_manifest.get("agent_files", [])
-
-        for agent_file in agent_files:
+        repo_url = f"https://github.com/{repo_owner}/{repo_name}.git"
+        
+        with tempfile.TemporaryDirectory() as tmp_dir:
             try:
-                # Download the markdown content
-                download_url = agent_file.get('download_url')
-                if not download_url:
-                    continue
+                logger.info(f"Cloning repository {repo_url}...")
+                # Clone with depth 1 to save time and space
+                subprocess.run(
+                    ["git", "clone", "--depth", "1", "--branch", repo_branch, repo_url, tmp_dir],
+                    check=True,
+                    capture_output=True,
+                    text=True
+                )
+            except subprocess.CalledProcessError as e:
+                # Try master if main fails, or vice versa
+                alternative_branch = "master" if repo_branch == "main" else "main"
+                try:
+                    logger.info(f"Cloning failed for {repo_branch}, trying {alternative_branch}...")
+                    subprocess.run(
+                        ["git", "clone", "--depth", "1", "--branch", alternative_branch, repo_url, tmp_dir],
+                        check=True,
+                        capture_output=True,
+                        text=True
+                    )
+                except subprocess.CalledProcessError:
+                    logger.error(f"Failed to clone repository {repo_url}: {e.stderr}")
+                    return agents
 
-                logger.debug(f"Fetching agent file: {download_url}")
-                response = self.session.get(download_url, timeout=self.timeout)
-                response.raise_for_status()
+            # Search for agent files in the specified path
+            search_path = os.path.join(tmp_dir, agents_path)
+            if not os.path.exists(search_path):
+                logger.warning(f"Agents path {agents_path} not found in {repo_owner}/{repo_name}")
+                return agents
 
-                markdown_content = response.text
-
-                # Parse agent data from markdown
-                agent_data = self._parse_agent_markdown(markdown_content, agent_file['name'])
-
-                if agent_data:
-                    # Build agent entry with repository association
-                    agent = {
-                        "name": agent_data.get("name", agent_file['name'].replace('.md', '')),
-                        "description": agent_data.get("description", ""),
-                        "category": agent_data.get("category", "General"),
-                        "author": agent_data.get("author"),
-                        "version": agent_data.get("version", "1.0.0"),
-                        "repo_owner": repo_owner,
-                        "repo_name": repo_name,
-                        "repo_url": f"https://github.com/{repo_owner}/{repo_name}",
-                        "file_path": agent_file['path'],
-                        "tags": agent_data.get("tags", []),
-                        "source_data": agent_data
-                    }
-                    agents.append(agent)
-
-            except requests.exceptions.RequestException as e:
-                logger.warning(f"Failed to fetch agent file {agent_file['name']}: {e}")
-                continue
+            for root, _, files in os.walk(search_path):
+                for filename in files:
+                    if filename.endswith(".md"):
+                        file_path = os.path.join(root, filename)
+                        relative_path = os.path.relpath(file_path, tmp_dir)
+                        
+                        try:
+                            with open(file_path, 'r', encoding='utf-8') as f:
+                                markdown_content = f.read()
+                            
+                            agent_data = self._parse_agent_markdown(markdown_content, filename)
+                            
+                            if agent_data:
+                                agent = {
+                                    "name": agent_data.get("name", filename.replace('.md', '')),
+                                    "description": agent_data.get("description", ""),
+                                    "category": agent_data.get("category", "General"),
+                                    "author": agent_data.get("author"),
+                                    "version": agent_data.get("version", "1.0.0"),
+                                    "repo_owner": repo_owner,
+                                    "repo_name": repo_name,
+                                    "repo_url": f"https://github.com/{repo_owner}/{repo_name}",
+                                    "file_path": relative_path,
+                                    "tags": agent_data.get("tags", []),
+                                    "source_data": agent_data
+                                }
+                                agents.append(agent)
+                        except Exception as e:
+                            logger.warning(f"Failed to read or parse {file_path}: {e}")
 
         logger.info("Fetched %d agents from repository %s/%s", len(agents), repo_owner, repo_name)
         return agents
 
     def _parse_agent_markdown(self, content: str, filename: str) -> Optional[Dict[str, Any]]:
-        """Parse agent data from markdown content."""
+        """Parse agent data from markdown content, including YAML front matter."""
         try:
-            # Basic parsing - look for YAML front matter or simple patterns
-            lines = content.strip().split('\n')
-
             agent_data = {
                 'name': filename.replace('.md', '').replace('-', ' ').title(),
                 'description': '',
-                'category': 'General'
+                'category': 'General',
+                'tags': [],
+                'version': '1.0.0',
+                'author': None
             }
+            
+            content_body = content
+            
+            # Check for YAML front matter
+            if content.startswith('---'):
+                parts = content.split('---', 2)
+                if len(parts) >= 3:
+                    front_matter = parts[1]
+                    content_body = parts[2]
+                    
+                    try:
+                        metadata = yaml.safe_load(front_matter)
+                        if isinstance(metadata, dict):
+                            # Map metadata to agent_data
+                            if 'name' in metadata:
+                                agent_data['name'] = metadata['name']
+                            elif 'title' in metadata:
+                                agent_data['name'] = metadata['title']
+                                
+                            if 'description' in metadata:
+                                agent_data['description'] = metadata['description']
+                                
+                            if 'category' in metadata:
+                                agent_data['category'] = metadata['category']
+                                
+                            if 'author' in metadata:
+                                agent_data['author'] = metadata['author']
+                                
+                            if 'version' in metadata:
+                                agent_data['version'] = str(metadata['version'])
+                                
+                            if 'tags' in metadata:
+                                agent_data['tags'] = metadata['tags']
+                    except yaml.YAMLError:
+                        # Fallback to regex-based extraction for common fields if YAML fails
+                        import re
+                        
+                        name_match = re.search(r'^name:\s*(.*)$', front_matter, re.MULTILINE | re.IGNORECASE)
+                        if not name_match:
+                            name_match = re.search(r'^title:\s*(.*)$', front_matter, re.MULTILINE | re.IGNORECASE)
+                        if name_match:
+                            agent_data['name'] = name_match.group(1).strip().strip('"\'')
+                            
+                        desc_match = re.search(r'^description:\s*(.*)$', front_matter, re.MULTILINE | re.IGNORECASE)
+                        if desc_match:
+                            agent_data['description'] = desc_match.group(1).strip().strip('"\'')
+                            
+                        cat_match = re.search(r'^category:\s*(.*)$', front_matter, re.MULTILINE | re.IGNORECASE)
+                        if cat_match:
+                            agent_data['category'] = cat_match.group(1).strip().strip('"\'')
 
-            # Try to extract description from first paragraph
-            in_description = False
-            description_lines = []
+                        author_match = re.search(r'^author:\s*(.*)$', front_matter, re.MULTILINE | re.IGNORECASE)
+                        if author_match:
+                            agent_data['author'] = author_match.group(1).strip().strip('"\'')
 
-            for line in lines:
-                line = line.strip()
-                if line.startswith('# '):
-                    # Title line - might override the filename-based name
-                    title = line[2:].strip()
-                    if title:
-                        agent_data['name'] = title
-                elif line and not line.startswith('#') and not in_description:
-                    # Start of description
-                    in_description = True
-                    description_lines.append(line)
-                elif line and in_description:
-                    description_lines.append(line)
-                elif not line and in_description:
-                    # End of paragraph
-                    break
+            # If description is still empty, try to extract from body
+            if not agent_data['description']:
+                lines = content_body.strip().split('\n')
+                in_description = False
+                description_lines = []
 
-            if description_lines:
-                agent_data['description'] = ' '.join(description_lines).strip()
+                for line in lines:
+                    line = line.strip()
+                    if line.startswith('# ') and agent_data['name'] == filename.replace('.md', '').replace('-', ' ').title():
+                         # Title line found in body
+                         pass 
+                    elif line and not line.startswith('#') and not in_description:
+                        # Start of description
+                        in_description = True
+                        description_lines.append(line)
+                    elif line and in_description:
+                        description_lines.append(line)
+                    elif not line and in_description:
+                        # End of paragraph
+                        break
+                
+                if description_lines:
+                    agent_data['description'] = ' '.join(description_lines).strip()
 
             return agent_data
 
