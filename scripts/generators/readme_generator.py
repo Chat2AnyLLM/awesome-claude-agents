@@ -36,14 +36,6 @@ class ReadmeGenerator:
         content.append(f"**Last updated:** {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}")
         content.append("")
 
-        # Table of Contents
-        toc = self._generate_table_of_contents()
-        if toc:
-            content.append("## Contents")
-            content.append("")
-            content.extend(toc)
-            content.append("")
-
         # Agent Repositories table
         if self.repositories:
             content.append("## Agent Repositories")
@@ -81,14 +73,9 @@ class ReadmeGenerator:
                 repo_name = agent.get('repo_name', '')
                 repo_url = f"https://github.com/{repo_owner}/{repo_name}"
 
-                content.append(f"| [{name}](#{name.lower().replace(' ', '-').replace('/', '').replace('.', '')}) | {description} | [{repo_owner}/{repo_name}]({repo_url}) |")
+                content.append(f"| {name} | {description} | [{repo_owner}/{repo_name}]({repo_url}) |")
 
             content.append("")
-
-            # Detailed agent sections
-            for agent in agents:
-                content.extend(self._generate_agent_detail(agent))
-                content.append("")
 
         # Footer
         content.append("---")
@@ -97,20 +84,6 @@ class ReadmeGenerator:
         content.append("")
 
         return "\n".join(content)
-
-    def _generate_table_of_contents(self) -> List[str]:
-        """Generate table of contents."""
-        toc = []
-        agents_by_category = self._group_agents_by_category()
-
-        if self.repositories:
-            toc.append("- [Agent Repositories](#agent-repositories)")
-
-        for category in sorted(agents_by_category.keys()):
-            category_anchor = category.lower().replace(' ', '-').replace(',', '').replace('&', 'and')
-            toc.append(f"- [{category}](#{category_anchor})")
-
-        return toc
 
     def _group_agents_by_category(self) -> Dict[str, List[Dict[str, Any]]]:
         """Group agents by category."""
@@ -127,30 +100,3 @@ class ReadmeGenerator:
         if len(description) <= max_length:
             return description
         return description[:max_length].rstrip() + "..."
-
-    def _generate_agent_detail(self, agent: Dict[str, Any]) -> List[str]:
-        """Generate detailed section for a single agent."""
-        content = []
-
-        name = agent.get('name', 'Unknown Agent')
-        description = agent.get('description', '')
-        author = agent.get('author', '')
-        repo_owner = agent.get('repo_owner', '')
-        repo_name = agent.get('repo_name', '')
-        tags = agent.get('tags', [])
-
-        content.append(f"### {name}")
-
-        if author:
-            content.append(f"**Author:** {author}")
-
-        if repo_owner and repo_name:
-            content.append(f"**Repository:** [{repo_owner}/{repo_name}](https://github.com/{repo_owner}/{repo_name})")
-
-        if tags:
-            content.append(f"**Tags:** {', '.join(tags)}")
-
-        content.append("")
-        content.append(description)
-
-        return content
