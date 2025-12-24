@@ -2,7 +2,7 @@
 
 A curated collection of Claude agents from various repositories and sources.
 
-**Last updated:** 2025-12-24 21:24 UTC
+**Last updated:** 2025-12-24 22:26 UTC
 
 ## Agent Repositories
 
