@@ -73,7 +73,8 @@ class ReadmeGenerator:
                 repo_name = agent.get('repo_name', '')
                 repo_url = f"https://github.com/{repo_owner}/{repo_name}"
 
-                content.append(f"| {name} | {description} | [{repo_owner}/{repo_name}]({repo_url}) |")
+                github_url = f"https://github.com/{repo_owner}/{repo_name}/blob/main/{agent.get('file_path', '')}"
+                content.append(f"| [{name}]({github_url}) | {description} | [{repo_owner}/{repo_name}]({repo_url}) |")
 
             content.append("")
 
