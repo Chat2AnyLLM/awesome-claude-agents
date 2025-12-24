@@ -40,17 +40,16 @@ class ReadmeGenerator:
         if self.repositories:
             content.append("## Agent Repositories")
             content.append("")
-            content.append("| Repository | Description | Enabled |")
-            content.append("|------------|-------------|---------|")
+            content.append("| Repository | Description |")
+            content.append("|------------|-------------|")
 
             for repo in self.repositories:
                 repo_id = repo.get('id', 'unknown')
                 owner = repo.get('owner', 'unknown')
                 name = repo.get('name', 'unknown')
-                enabled = "✅" if repo.get('enabled', True) else "❌"
 
                 description = f"[{owner}/{name}](https://github.com/{owner}/{name})"
-                content.append(f"| [{repo_id}](https://github.com/{owner}/{name}) | {description} | {enabled} |")
+                content.append(f"| [{repo_id}](https://github.com/{owner}/{name}) | {description} |")
 
             content.append("")
 

@@ -110,7 +110,7 @@ class Fetcher:
                            repo_branch: str = "main", agents_path: str = "agents") -> Optional[Dict[str, Any]]:
         """Fetch agents from a GitHub repository.
 
-        Looks for agent files in the specified agents path.
+        Looks for agent files in the specified agents path and recursively searches subdirectories.
         """
         # Try multiple branch names in order of popularity
         branch_attempts = [repo_branch]
@@ -120,35 +120,50 @@ class Fetcher:
             branch_attempts.extend(["main", "develop", "development", "dev"])
 
         for attempt_branch in branch_attempts:
-            # First try to get directory listing
-            api_url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/contents/{agents_path}?ref={attempt_branch}"
-            try:
-                logger.debug(f"Trying to fetch agent directory from {api_url}")
-                response = self.session.get(api_url, timeout=self.timeout)
-                response.raise_for_status()
+            # Recursively fetch all agent files
+            agent_files = self._fetch_agent_files_recursive(repo_owner, repo_name, agents_path, attempt_branch)
 
-                contents = response.json()
-                if isinstance(contents, list):
-                    # Extract agent files
-                    agent_files = []
-                    for item in contents:
-                        if item.get('type') == 'file' and item.get('name', '').endswith('.md'):
-                            agent_files.append({
-                                'name': item['name'],
-                                'path': item['path'],
-                                'download_url': item['download_url']
-                            })
-
-                    if agent_files:
-                        logger.info(f"Successfully fetched agent directory from {repo_owner}/{repo_name}")
-                        return {'agent_files': agent_files}
-
-            except requests.exceptions.RequestException as e:
-                logger.debug(f"Failed to fetch directory from branch {attempt_branch}: {e}")
-                continue
+            if agent_files:
+                logger.info(f"Successfully fetched agent files from {repo_owner}/{repo_name}")
+                return {'agent_files': agent_files}
 
         logger.warning(f"No valid agent directory found in {repo_owner}/{repo_name}")
         return None
+
+    def _fetch_agent_files_recursive(self, repo_owner: str, repo_name: str, path: str, branch: str) -> List[Dict[str, Any]]:
+        """Recursively fetch all .md files from a directory and its subdirectories."""
+        agent_files = []
+
+        # Get contents of current directory
+        api_url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/contents/{path}?ref={branch}"
+        try:
+            logger.debug(f"Fetching directory contents from {api_url}")
+            response = self.session.get(api_url, timeout=self.timeout)
+            response.raise_for_status()
+
+            contents = response.json()
+            if isinstance(contents, list):
+                for item in contents:
+                    item_type = item.get('type')
+                    item_path = item.get('path')
+                    item_name = item.get('name', '')
+
+                    if item_type == 'file' and item_name.endswith('.md'):
+                        # Found an agent file
+                        agent_files.append({
+                            'name': item_name,
+                            'path': item_path,
+                            'download_url': item.get('download_url')
+                        })
+                    elif item_type == 'dir':
+                        # Recursively search subdirectory
+                        subdirectory_files = self._fetch_agent_files_recursive(repo_owner, repo_name, item_path, branch)
+                        agent_files.extend(subdirectory_files)
+
+        except requests.exceptions.RequestException as e:
+            logger.debug(f"Failed to fetch directory {path} from branch {branch}: {e}")
+
+        return agent_files
 
     def _validate_agent_index(self, data: Dict[str, Any]) -> bool:
         """Validate agent index structure."""

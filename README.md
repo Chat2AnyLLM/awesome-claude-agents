@@ -2,15 +2,15 @@
 
 A curated collection of Claude agents from various repositories and sources.
 
-**Last updated:** 2025-12-24 03:08 UTC
+**Last updated:** 2025-12-24 03:13 UTC
 
 ## Agent Repositories
 
-| Repository | Description | Enabled |
-|------------|-------------|---------|
-| [iannuttall/claude-agents](https://github.com/iannuttall/claude-agents) | [iannuttall/claude-agents](https://github.com/iannuttall/claude-agents) | ✅ |
-| [diet103/claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase) | [diet103/claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase) | ✅ |
-| [vijaythecoder/awesome-claude-agents](https://github.com/vijaythecoder/awesome-claude-agents) | [vijaythecoder/awesome-claude-agents](https://github.com/vijaythecoder/awesome-claude-agents) | ✅ |
+| Repository | Description |
+|------------|-------------|
+| [iannuttall/claude-agents](https://github.com/iannuttall/claude-agents) | [iannuttall/claude-agents](https://github.com/iannuttall/claude-agents) |
+| [diet103/claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase) | [diet103/claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase) |
+| [vijaythecoder/awesome-claude-agents](https://github.com/vijaythecoder/awesome-claude-agents) | [vijaythecoder/awesome-claude-agents](https://github.com/vijaythecoder/awesome-claude-agents) |
 
 ## General
 
@@ -34,6 +34,16 @@ A curated collection of Claude agents from various repositories and sources.
 | [Plan Reviewer](https://github.com/diet103/claude-code-infrastructure-showcase/blob/main/.claude/agents/plan-reviewer.md) | --- name: plan-reviewer description: Use this agent when you have a development plan that needs thor... | [diet103/claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase) |
 | [Refactor Planner](https://github.com/diet103/claude-code-infrastructure-showcase/blob/main/.claude/agents/refactor-planner.md) | --- name: refactor-planner description: Use this agent when you need to analyze code structure and c... | [diet103/claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase) |
 | [Web Research Specialist](https://github.com/diet103/claude-code-infrastructure-showcase/blob/main/.claude/agents/web-research-specialist.md) | --- name: web-research-specialist description: Use this agent when you need to research information... | [diet103/claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase) |
+| [Code Archaeologist](https://github.com/vijaythecoder/awesome-claude-agents/blob/main/agents/core/code-archaeologist.md) | --- name: code-archaeologist description: MUST BE USED to explore and document unfamiliar, legacy, o... | [vijaythecoder/awesome-claude-agents](https://github.com/vijaythecoder/awesome-claude-agents) |
+| [Code Reviewer](https://github.com/vijaythecoder/awesome-claude-agents/blob/main/agents/core/code-reviewer.md) | --- name: code-reviewer description: MUST BE USED to run a rigorous, security-aware review after eve... | [vijaythecoder/awesome-claude-agents](https://github.com/vijaythecoder/awesome-claude-agents) |
+| [Documentation Specialist](https://github.com/vijaythecoder/awesome-claude-agents/blob/main/agents/core/documentation-specialist.md) | --- name: documentation-specialist description: MUST BE USED to craft or update project documentatio... | [vijaythecoder/awesome-claude-agents](https://github.com/vijaythecoder/awesome-claude-agents) |
+| [Performance Optimizer](https://github.com/vijaythecoder/awesome-claude-agents/blob/main/agents/core/performance-optimizer.md) | --- name: performance-optimizer description: MUST BE USED whenever users report slowness, high cloud... | [vijaythecoder/awesome-claude-agents](https://github.com/vijaythecoder/awesome-claude-agents) |
+| [Project Analyst](https://github.com/vijaythecoder/awesome-claude-agents/blob/main/agents/orchestrators/project-analyst.md) | --- name: project-analyst description: MUST BE USED to analyse any new or unfamiliar codebase. Use P... | [vijaythecoder/awesome-claude-agents](https://github.com/vijaythecoder/awesome-claude-agents) |
+| [Team Configurator](https://github.com/vijaythecoder/awesome-claude-agents/blob/main/agents/orchestrators/team-configurator.md) | --- name: team-configurator description: MUST BE USED to set up—or refresh—the AI development team f... | [vijaythecoder/awesome-claude-agents](https://github.com/vijaythecoder/awesome-claude-agents) |
+| [Tech Lead Orchestrator](https://github.com/vijaythecoder/awesome-claude-agents/blob/main/agents/orchestrators/tech-lead-orchestrator.md) | --- name: tech-lead-orchestrator description: Senior technical lead who analyzes complex software pr... | [vijaythecoder/awesome-claude-agents](https://github.com/vijaythecoder/awesome-claude-agents) |
+| [Django Api Developer](https://github.com/vijaythecoder/awesome-claude-agents/blob/main/agents/specialized/django/django-api-developer.md) | --- name: django-api-developer description: Expert Django API developer specializing in Django REST... | [vijaythecoder/awesome-claude-agents](https://github.com/vijaythecoder/awesome-claude-agents) |
+| [Django Backend Expert](https://github.com/vijaythecoder/awesome-claude-agents/blob/main/agents/specialized/django/django-backend-expert.md) | --- name: django-backend-expert description: Expert Django backend developer specializing in models,... | [vijaythecoder/awesome-claude-agents](https://github.com/vijaythecoder/awesome-claude-agents) |
+| [Django Orm Expert](https://github.com/vijaythecoder/awesome-claude-agents/blob/main/agents/specialized/django/django-orm-expert.md) | --- name: django-orm-expert description: Expert in Django ORM optimization, complex queries, and dat... | [vijaythecoder/awesome-claude-agents](https://github.com/vijaythecoder/awesome-claude-agents) |
 
 ---
 

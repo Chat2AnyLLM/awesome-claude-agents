@@ -8,6 +8,8 @@ import argparse
 import logging
 from pathlib import Path
 from typing import List
+import concurrent.futures
+from concurrent.futures import ThreadPoolExecutor
 
 try:
     from .config import Config
@@ -70,7 +72,8 @@ def cmd_generate_readme(args, config, logger):
         repositories = fetcher.fetch_agent_repos_from_source(source)
         all_repositories.extend(repositories)
 
-        # Fetch agents for each repository
+        # Filter enabled and valid repositories
+        valid_repos = []
         for repo_data in repositories:
             if not repo_data.get('enabled', True):
                 logger.debug("Skipping disabled repository: %s", repo_data.get('id'))
@@ -80,8 +83,27 @@ def cmd_generate_readme(args, config, logger):
                 logger.warning("Invalid repository data, skipping: %s", repo_data.get('id'))
                 continue
 
-            agents = fetcher.fetch_agents_from_repo(repo_data)
-            all_agents.extend(agents)
+            valid_repos.append(repo_data)
+
+        # Fetch agents in parallel
+        if valid_repos:
+            logger.info("Fetching agents from %d repositories in parallel", len(valid_repos))
+            with ThreadPoolExecutor(max_workers=min(len(valid_repos), 10)) as executor:
+                # Submit all fetch tasks
+                future_to_repo = {
+                    executor.submit(fetcher.fetch_agents_from_repo, repo_data): repo_data
+                    for repo_data in valid_repos
+                }
+
+                # Collect results as they complete
+                for future in concurrent.futures.as_completed(future_to_repo):
+                    repo_data = future_to_repo[future]
+                    try:
+                        agents = future.result()
+                        all_agents.extend(agents)
+                        logger.debug("Fetched %d agents from %s", len(agents), repo_data.get('id'))
+                    except Exception as exc:
+                        logger.error("Failed to fetch agents from %s: %s", repo_data.get('id'), exc)
 
     logger.info("Total repositories collected: %d", len(all_repositories))
     logger.info("Total agents collected: %d", len(all_agents))
