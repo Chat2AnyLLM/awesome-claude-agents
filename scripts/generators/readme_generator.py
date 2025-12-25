@@ -36,6 +36,14 @@ class ReadmeGenerator:
         content.append(f"**Last updated:** {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}")
         content.append("")
 
+        # Installation instructions
+        content.append("## Installation")
+        content.append("")
+        content.append("1. Install CAM: `curl -fsSL https://raw.githubusercontent.com/Chat2AnyLLM/code-assistant-manager/main/install.sh | bash`")
+        content.append("2. `cam agent fetch`")
+        content.append("3. `cam agent install security-auditor`")
+        content.append("")
+
         # Agent Repositories table
         if self.repositories:
             content.append("## Agent Repositories")

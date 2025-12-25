@@ -2,7 +2,13 @@
 
 A curated collection of **407** Claude agents from various repositories and sources.
 
-**Last updated:** 2025-12-25 04:02 UTC
+**Last updated:** 2025-12-25 04:41 UTC
+
+## Installation
+
+1. Install CAM: `curl -fsSL https://raw.githubusercontent.com/Chat2AnyLLM/code-assistant-manager/main/install.sh | bash`
+2. `cam agent fetch`
+3. `cam agent install security-auditor`
 
 ## Agent Repositories
 
