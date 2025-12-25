@@ -1,8 +1,8 @@
 # Awesome Claude Agents
 
-A curated collection of Claude agents from various repositories and sources.
+A curated collection of **407** Claude agents from various repositories and sources.
 
-**Last updated:** 2025-12-24 04:31 UTC
+**Last updated:** 2025-12-25 01:08 UTC
 
 ## Agent Repositories
 

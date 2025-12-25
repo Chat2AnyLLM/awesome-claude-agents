@@ -31,7 +31,7 @@ class ReadmeGenerator:
         # Header
         content.append("# Awesome Claude Agents")
         content.append("")
-        content.append("A curated collection of Claude agents from various repositories and sources.")
+        content.append(f"A curated collection of **{len(self.agents)}** Claude agents from various repositories and sources.")
         content.append("")
         content.append(f"**Last updated:** {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}")
         content.append("")
