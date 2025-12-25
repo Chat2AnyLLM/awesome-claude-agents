@@ -2,7 +2,7 @@
 
 A curated collection of **407** Claude agents from various repositories and sources.
 
-**Last updated:** 2025-12-25 11:23 UTC
+**Last updated:** 2025-12-25 12:25 UTC
 
 ## Installation
 
@@ -18,6 +18,7 @@ A curated collection of **407** Claude agents from various repositories and sour
 | [diet103/claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase) | [diet103/claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase) |
 | [vijaythecoder/awesome-claude-agents](https://github.com/vijaythecoder/awesome-claude-agents) | [vijaythecoder/awesome-claude-agents](https://github.com/vijaythecoder/awesome-claude-agents) |
 | [wshobson/agents](https://github.com/wshobson/agents) | [wshobson/agents](https://github.com/wshobson/agents) |
+| [K-Dense-AI/claude-scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) | [K-Dense-AI/claude-scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) |
 
 ## General
 
