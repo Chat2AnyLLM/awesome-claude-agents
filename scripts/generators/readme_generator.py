@@ -44,27 +44,25 @@ class ReadmeGenerator:
         content.append("3. `cam agent install security-auditor`")
         content.append("")
 
-        # Agent Repositories table
-        if self.repositories:
-            content.append("## Agent Repositories")
-            content.append("")
-            content.append("| Repository | Description |")
-            content.append("|------------|-------------|")
-
-            for repo in self.repositories:
-                repo_id = repo.get('id', 'unknown')
-                owner = repo.get('owner', 'unknown')
-                name = repo.get('name', 'unknown')
-
-                description = f"[{owner}/{name}](https://github.com/{owner}/{name})"
-                content.append(f"| [{repo_id}](https://github.com/{owner}/{name}) | {description} |")
-
-            content.append("")
-
         # Category sections with tables
         agents_by_category = self._group_agents_by_category()
+        categories = sorted(agents_by_category.keys())
 
-        for category in sorted(agents_by_category.keys()):
+        # Table of Contents
+        if categories:
+            content.append("## Table of Contents")
+            content.append("")
+            for category in categories:
+                # GitHub-style anchor generation:
+                # 1. Downcase
+                # 2. Remove chars that are not a-z, 0-9, space, or hyphen
+                # 3. Replace spaces with hyphens
+                clean_cat = "".join(c for c in category.lower() if c.isalnum() or c in " -")
+                anchor = clean_cat.replace(' ', '-')
+                content.append(f"- [{category}](#{anchor})")
+            content.append("")
+
+        for category in categories:
             agents = agents_by_category[category]
             content.append(f"## {category}")
             content.append("")
