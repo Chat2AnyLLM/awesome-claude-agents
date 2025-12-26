@@ -41,6 +41,8 @@ class Agent:
     repo_url: str = ""
     file_path: str = ""
     tags: List[str] = None
+    model: Optional[str] = None
+    color: Optional[str] = None
 
     def __post_init__(self):
         if self.tags is None:

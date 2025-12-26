@@ -68,18 +68,19 @@ class ReadmeGenerator:
             content.append("")
 
             # Create a table for agents in this category
-            content.append("| Agent | Description | Repository |")
-            content.append("|-------|-------------|------------|")
+            content.append("| Agent | Description | Model | Repository |")
+            content.append("|-------|-------------|-------|------------|")
 
             for agent in agents:
                 name = agent.get('name', 'Unknown Agent')
                 description = self._truncate_description(agent.get('description', 'No description available'))
+                model = agent.get('model') or '-'
                 repo_owner = agent.get('repo_owner', '')
                 repo_name = agent.get('repo_name', '')
                 repo_url = f"https://github.com/{repo_owner}/{repo_name}"
 
                 github_url = f"https://github.com/{repo_owner}/{repo_name}/blob/main/{agent.get('file_path', '')}"
-                content.append(f"| [{name}]({github_url}) | {description} | [{repo_owner}/{repo_name}]({repo_url}) |")
+                content.append(f"| [{name}]({github_url}) | {description} | {model} | [{repo_owner}/{repo_name}]({repo_url}) |")
 
             content.append("")
 

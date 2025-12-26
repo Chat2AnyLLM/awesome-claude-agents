@@ -198,6 +198,8 @@ class Fetcher:
                                     "repo_url": f"https://github.com/{repo_owner}/{repo_name}",
                                     "file_path": relative_path,
                                     "tags": agent_data.get("tags", []),
+                                    "model": agent_data.get("model"),
+                                    "color": agent_data.get("color"),
                                     "source_data": agent_data
                                 }
                                 agents.append(agent)
@@ -237,8 +239,12 @@ class Fetcher:
                             elif 'title' in metadata:
                                 agent_data['name'] = metadata['title']
                                 
-                            if 'description' in metadata:
-                                agent_data['description'] = metadata['description']
+                                if 'description' in metadata:
+                                    desc = metadata['description']
+                                    # Split on "Examples:" to keep description concise
+                                    if "Examples:" in desc:
+                                        desc = desc.split("Examples:")[0].strip()
+                                    agent_data['description'] = desc
                                 
                             if 'category' in metadata:
                                 agent_data['category'] = metadata['category']
@@ -251,6 +257,12 @@ class Fetcher:
                                 
                             if 'tags' in metadata:
                                 agent_data['tags'] = metadata['tags']
+
+                            if 'model' in metadata:
+                                agent_data['model'] = metadata['model']
+
+                            if 'color' in metadata:
+                                agent_data['color'] = metadata['color']
                     except yaml.YAMLError:
                         # Fallback to regex-based extraction for common fields if YAML fails
                         import re
