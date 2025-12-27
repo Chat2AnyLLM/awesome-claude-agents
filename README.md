@@ -1,8 +1,8 @@
 # Awesome Claude Agents
 
-A curated collection of **444** Claude agents from various repositories and sources.
+A curated collection of **458** Claude agents from various repositories and sources.
 
-**Last updated:** 2025-12-27 07:24 UTC
+**Last updated:** 2025-12-27 07:50 UTC
 
 ## Installation
 
@@ -458,6 +458,20 @@ A curated collection of **444** Claude agents from various repositories and sour
 | [golang-pro](https://github.com/lst97/claude-code-sub-agents/blob/main/agents/development/golang-pro.md) | **Role**: Principal-level Go Engineer specializing in robust, concurrent, and highly performant appl... | sonnet | [lst97/claude-code-sub-agents](https://github.com/lst97/claude-code-sub-agents) |
 | [frontend-developer](https://github.com/lst97/claude-code-sub-agents/blob/main/agents/development/frontend-developer.md) | **Role**: Senior frontend engineer and AI pair programmer specializing in building scalable, maintai... | sonnet | [lst97/claude-code-sub-agents](https://github.com/lst97/claude-code-sub-agents) |
 | [ux-designer](https://github.com/lst97/claude-code-sub-agents/blob/main/agents/development/ux-designer.md) | **Role**: Professional UX Designer specializing in human-centered design and user advocacy. Expert i... | sonnet | [lst97/claude-code-sub-agents](https://github.com/lst97/claude-code-sub-agents) |
+| [testing-specialist](https://github.com/Dexploarer/hyper-forge/blob/main/.claude/agents/testing-specialist.md) | Expert in Bun testing, Playwright E2E testing, and visual regression testing. | sonnet | [Dexploarer/hyper-forge](https://github.com/Dexploarer/hyper-forge) |
+| [developer-fixer](https://github.com/Dexploarer/hyper-forge/blob/main/.claude/agents/developer-fixer.md) | Specialist in API documentation, SDK generation, automation, and technical workflows. | sonnet | [Dexploarer/hyper-forge](https://github.com/Dexploarer/hyper-forge) |
+| [file-validator](https://github.com/Dexploarer/hyper-forge/blob/main/.claude/agents/file-validator.md) | Expert in comprehensive file validation using Deepwiki to ensure current best practices, type safety... | sonnet | [Dexploarer/hyper-forge](https://github.com/Dexploarer/hyper-forge) |
+| [security-specialist](https://github.com/Dexploarer/hyper-forge/blob/main/.claude/agents/security-specialist.md) | Expert in authentication, authorization, security auditing, and vulnerability assessment. | sonnet | [Dexploarer/hyper-forge](https://github.com/Dexploarer/hyper-forge) |
+| [validation-orchestrator](https://github.com/Dexploarer/hyper-forge/blob/main/.claude/agents/validation-orchestrator.md) | Expert in managing parallel file validation agents, rate limit coordination, and comprehensive repor... | sonnet | [Dexploarer/hyper-forge](https://github.com/Dexploarer/hyper-forge) |
+| [api-specialist](https://github.com/Dexploarer/hyper-forge/blob/main/.claude/agents/api-specialist.md) | Expert in Elysia framework, REST API design, and backend TypeScript development. | sonnet | [Dexploarer/hyper-forge](https://github.com/Dexploarer/hyper-forge) |
+| [game-designer-fixer](https://github.com/Dexploarer/hyper-forge/blob/main/.claude/agents/game-designer-fixer.md) | Specialist in content generation, quest systems, world building, and playtester workflows. | sonnet | [Dexploarer/hyper-forge](https://github.com/Dexploarer/hyper-forge) |
+| [database-specialist](https://github.com/Dexploarer/hyper-forge/blob/main/.claude/agents/database-specialist.md) | Expert in Drizzle ORM, PostgreSQL, and database design for the asset-forge project. | sonnet | [Dexploarer/hyper-forge](https://github.com/Dexploarer/hyper-forge) |
+| [frontend-specialist](https://github.com/Dexploarer/hyper-forge/blob/main/.claude/agents/frontend-specialist.md) | Expert in React, Three.js, React Three Fiber, and modern frontend development. | sonnet | [Dexploarer/hyper-forge](https://github.com/Dexploarer/hyper-forge) |
+| [config-specialist](https://github.com/Dexploarer/hyper-forge/blob/main/.claude/agents/config-specialist.md) | Expert in managing and updating the `.claude` directory structure, enforcing development philosophie... | sonnet | [Dexploarer/hyper-forge](https://github.com/Dexploarer/hyper-forge) |
+| [power-user-fixer](https://github.com/Dexploarer/hyper-forge/blob/main/.claude/agents/power-user-fixer.md) | Specialist in efficiency features, keyboard shortcuts, bulk operations, and advanced filters. | sonnet | [Dexploarer/hyper-forge](https://github.com/Dexploarer/hyper-forge) |
+| [new-user-fixer](https://github.com/Dexploarer/hyper-forge/blob/main/.claude/agents/new-user-fixer.md) | Specialist in improving first-time user experience, onboarding, and documentation. | sonnet | [Dexploarer/hyper-forge](https://github.com/Dexploarer/hyper-forge) |
+| [admin-fixer](https://github.com/Dexploarer/hyper-forge/blob/main/.claude/agents/admin-fixer.md) | Specialist in admin dashboards, user management, analytics, and system monitoring. | sonnet | [Dexploarer/hyper-forge](https://github.com/Dexploarer/hyper-forge) |
+| [3d-artist-fixer](https://github.com/Dexploarer/hyper-forge/blob/main/.claude/agents/3d-artist-fixer.md) | Specialist in 3D asset workflows, Three.js optimization, and export functionality. | sonnet | [Dexploarer/hyper-forge](https://github.com/Dexploarer/hyper-forge) |
 
 ## specialized/python
 
