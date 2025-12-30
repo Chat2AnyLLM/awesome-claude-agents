@@ -1,8 +1,8 @@
 # Awesome Claude Agents
 
-A curated collection of **469** Claude agents from various repositories and sources.
+A curated collection of **474** Claude agents from various repositories and sources.
 
-**Last updated:** 2025-12-30 21:26 UTC
+**Last updated:** 2025-12-30 22:26 UTC
 
 ## Installation
 
@@ -413,6 +413,11 @@ A curated collection of **469** Claude agents from various repositories and sour
 | [business-analyst](https://github.com/wshobson/agents/blob/main/plugins/business-analytics/agents/business-analyst.md) | You are an expert business analyst specializing in data-driven decision making through advanced anal... | sonnet | [wshobson/agents](https://github.com/wshobson/agents) |
 | [kpi-dashboard-design](https://github.com/wshobson/agents/blob/main/plugins/business-analytics/skills/kpi-dashboard-design/SKILL.md) | Comprehensive patterns for designing effective Key Performance Indicator (KPI) dashboards that drive... | - | [wshobson/agents](https://github.com/wshobson/agents) |
 | [data-storytelling](https://github.com/wshobson/agents/blob/main/plugins/business-analytics/skills/data-storytelling/SKILL.md) | Transform raw data into compelling narratives that drive decisions and inspire action. | - | [wshobson/agents](https://github.com/wshobson/agents) |
+| [Readme](https://github.com/wshobson/agents/blob/main/plugins/dotnet-contribution/README.md) | A comprehensive plugin for .NET backend development with C#, ASP.NET Core, Entity Framework Core, an... | - | [wshobson/agents](https://github.com/wshobson/agents) |
+| [dotnet-architect](https://github.com/wshobson/agents/blob/main/plugins/dotnet-contribution/agents/dotnet-architect.md) | You are an expert .NET backend architect with deep knowledge of C#, ASP.NET Core, and enterprise app... | sonnet | [wshobson/agents](https://github.com/wshobson/agents) |
+| [dotnet-backend-patterns](https://github.com/wshobson/agents/blob/main/plugins/dotnet-contribution/skills/dotnet-backend-patterns/SKILL.md) | Master C#/.NET patterns for building production-grade APIs, MCP servers, and enterprise backends wit... | - | [wshobson/agents](https://github.com/wshobson/agents) |
+| [Ef Core Best Practices](https://github.com/wshobson/agents/blob/main/plugins/dotnet-contribution/skills/dotnet-backend-patterns/references/ef-core-best-practices.md) | Performance optimization and best practices for EF Core in production applications. | - | [wshobson/agents](https://github.com/wshobson/agents) |
+| [Dapper Patterns](https://github.com/wshobson/agents/blob/main/plugins/dotnet-contribution/skills/dotnet-backend-patterns/references/dapper-patterns.md) | Advanced patterns for high-performance data access with Dapper in .NET. | - | [wshobson/agents](https://github.com/wshobson/agents) |
 | [Data Pipeline](https://github.com/wshobson/agents/blob/main/plugins/data-engineering/commands/data-pipeline.md) | You are a data pipeline architecture expert specializing in scalable, reliable, and cost-effective d... | - | [wshobson/agents](https://github.com/wshobson/agents) |
 | [Data Driven Feature](https://github.com/wshobson/agents/blob/main/plugins/data-engineering/commands/data-driven-feature.md) | Build features guided by data insights, A/B testing, and continuous measurement using specialized ag... | - | [wshobson/agents](https://github.com/wshobson/agents) |
 | [backend-architect](https://github.com/wshobson/agents/blob/main/plugins/data-engineering/agents/backend-architect.md) | You are a backend system architect specializing in scalable, resilient, and maintainable backend sys... | inherit | [wshobson/agents](https://github.com/wshobson/agents) |
