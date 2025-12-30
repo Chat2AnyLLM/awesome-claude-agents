@@ -1,8 +1,8 @@
 # Awesome Claude Agents
 
-A curated collection of **458** Claude agents from various repositories and sources.
+A curated collection of **469** Claude agents from various repositories and sources.
 
-**Last updated:** 2025-12-30 02:09 UTC
+**Last updated:** 2025-12-30 04:03 UTC
 
 ## Installation
 
@@ -472,6 +472,17 @@ A curated collection of **458** Claude agents from various repositories and sour
 | [new-user-fixer](https://github.com/Dexploarer/hyper-forge/blob/main/.claude/agents/new-user-fixer.md) | Specialist in improving first-time user experience, onboarding, and documentation. | sonnet | [Dexploarer/hyper-forge](https://github.com/Dexploarer/hyper-forge) |
 | [admin-fixer](https://github.com/Dexploarer/hyper-forge/blob/main/.claude/agents/admin-fixer.md) | Specialist in admin dashboards, user management, analytics, and system monitoring. | sonnet | [Dexploarer/hyper-forge](https://github.com/Dexploarer/hyper-forge) |
 | [3d-artist-fixer](https://github.com/Dexploarer/hyper-forge/blob/main/.claude/agents/3d-artist-fixer.md) | Specialist in 3D asset workflows, Three.js optimization, and export functionality. | sonnet | [Dexploarer/hyper-forge](https://github.com/Dexploarer/hyper-forge) |
+| [code-refactor-master](https://github.com/diet103/claude-code-infrastructure-showcase/blob/main/.claude/agents/code-refactor-master.md) | Use this agent when you need to refactor code for better organization, cleaner architecture, or impr... | - | [diet103/claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase) |
+| [auth-route-tester](https://github.com/diet103/claude-code-infrastructure-showcase/blob/main/.claude/agents/auth-route-tester.md) | Use this agent when you need to test routes after implementing or modifying them. This agent focuses... | - | [diet103/claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase) |
+| [code-architecture-reviewer](https://github.com/diet103/claude-code-infrastructure-showcase/blob/main/.claude/agents/code-architecture-reviewer.md) | Use this agent when you need to review recently written code for adherence to best practices, archit... | - | [diet103/claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase) |
+| [refactor-planner](https://github.com/diet103/claude-code-infrastructure-showcase/blob/main/.claude/agents/refactor-planner.md) | Use this agent when you need to analyze code structure and create comprehensive refactoring plans. T... | - | [diet103/claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase) |
+| [documentation-architect](https://github.com/diet103/claude-code-infrastructure-showcase/blob/main/.claude/agents/documentation-architect.md) | Use this agent when you need to create, update, or enhance documentation for any part of the codebas... | - | [diet103/claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase) |
+| [Readme](https://github.com/diet103/claude-code-infrastructure-showcase/blob/main/.claude/agents/README.md) | Specialized agents for complex, multi-step tasks. | - | [diet103/claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase) |
+| [web-research-specialist](https://github.com/diet103/claude-code-infrastructure-showcase/blob/main/.claude/agents/web-research-specialist.md) | Use this agent when you need to research information on the internet, particularly for debugging iss... | - | [diet103/claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase) |
+| [plan-reviewer](https://github.com/diet103/claude-code-infrastructure-showcase/blob/main/.claude/agents/plan-reviewer.md) | Use this agent when you have a development plan that needs thorough review before implementation to... | - | [diet103/claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase) |
+| [auth-route-debugger](https://github.com/diet103/claude-code-infrastructure-showcase/blob/main/.claude/agents/auth-route-debugger.md) | Use this agent when you need to debug authentication-related issues with API routes, including 401/4... | - | [diet103/claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase) |
+| [frontend-error-fixer](https://github.com/diet103/claude-code-infrastructure-showcase/blob/main/.claude/agents/frontend-error-fixer.md) | Use this agent when you encounter frontend errors, whether they appear during the build process (Typ... | - | [diet103/claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase) |
+| [auto-error-resolver](https://github.com/diet103/claude-code-infrastructure-showcase/blob/main/.claude/agents/auto-error-resolver.md) | You are a specialized TypeScript error resolution agent. Your primary job is to fix TypeScript compi... | - | [diet103/claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase) |
 
 ## specialized/python
 
