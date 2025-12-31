@@ -2,7 +2,7 @@
 
 A curated collection of **474** Claude agents from various repositories and sources.
 
-**Last updated:** 2025-12-31 07:29 UTC
+**Last updated:** 2025-12-31 08:38 UTC
 
 ## Installation
 
