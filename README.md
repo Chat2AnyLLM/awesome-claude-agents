@@ -1,8 +1,8 @@
 # Awesome Claude Agents
 
-A curated collection of **474** Claude agents from various repositories and sources.
+A curated collection of **481** Claude agents from various repositories and sources.
 
-**Last updated:** 2026-01-03 23:25 UTC
+**Last updated:** 2026-01-04 02:29 UTC
 
 ## Installation
 
@@ -488,6 +488,13 @@ A curated collection of **474** Claude agents from various repositories and sour
 | [auth-route-debugger](https://github.com/diet103/claude-code-infrastructure-showcase/blob/main/.claude/agents/auth-route-debugger.md) | Use this agent when you need to debug authentication-related issues with API routes, including 401/4... | - | [diet103/claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase) |
 | [frontend-error-fixer](https://github.com/diet103/claude-code-infrastructure-showcase/blob/main/.claude/agents/frontend-error-fixer.md) | Use this agent when you encounter frontend errors, whether they appear during the build process (Typ... | - | [diet103/claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase) |
 | [auto-error-resolver](https://github.com/diet103/claude-code-infrastructure-showcase/blob/main/.claude/agents/auto-error-resolver.md) | You are a specialized TypeScript error resolution agent. Your primary job is to fix TypeScript compi... | - | [diet103/claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase) |
+| [code-reviewer](https://github.com/CloudAI-X/claude-workflow-v2/blob/main/agents/code-reviewer.md) | You are a senior code reviewer with expertise across multiple languages and frameworks. Your reviews... | sonnet | [CloudAI-X/claude-workflow-v2](https://github.com/CloudAI-X/claude-workflow-v2) |
+| [refactorer](https://github.com/CloudAI-X/claude-workflow-v2/blob/main/agents/refactorer.md) | You are a refactoring expert who improves code structure without changing external behavior. You app... | sonnet | [CloudAI-X/claude-workflow-v2](https://github.com/CloudAI-X/claude-workflow-v2) |
+| [test-architect](https://github.com/CloudAI-X/claude-workflow-v2/blob/main/agents/test-architect.md) | You are a testing expert who designs comprehensive test strategies and writes effective tests. You e... | sonnet | [CloudAI-X/claude-workflow-v2](https://github.com/CloudAI-X/claude-workflow-v2) |
+| [debugger](https://github.com/CloudAI-X/claude-workflow-v2/blob/main/agents/debugger.md) | You are an expert debugger specializing in systematic root cause analysis. You find bugs efficiently... | sonnet | [CloudAI-X/claude-workflow-v2](https://github.com/CloudAI-X/claude-workflow-v2) |
+| [docs-writer](https://github.com/CloudAI-X/claude-workflow-v2/blob/main/agents/docs-writer.md) | You are a technical writer who creates clear, accurate, and maintainable documentation. You write fo... | sonnet | [CloudAI-X/claude-workflow-v2](https://github.com/CloudAI-X/claude-workflow-v2) |
+| [orchestrator](https://github.com/CloudAI-X/claude-workflow-v2/blob/main/agents/orchestrator.md) | You are a senior software architect and project coordinator. Your role is to break down complex task... | opus | [CloudAI-X/claude-workflow-v2](https://github.com/CloudAI-X/claude-workflow-v2) |
+| [security-auditor](https://github.com/CloudAI-X/claude-workflow-v2/blob/main/agents/security-auditor.md) | You are a security engineer specializing in application security, vulnerability detection, and secur... | sonnet | [CloudAI-X/claude-workflow-v2](https://github.com/CloudAI-X/claude-workflow-v2) |
 
 ## specialized/python
 
