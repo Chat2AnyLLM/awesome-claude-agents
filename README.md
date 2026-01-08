@@ -1,10 +1,14 @@
 # Awesome Claude Agents
 
+![Awesome](https://awesome.re/badge.svg)
+
 A curated collection of **481** Claude agents from various repositories and sources.
 
-**Last updated:** 2026-01-07 23:28 UTC
+**Last updated:** 2026-01-08 00:49 UTC
 
 ## Installation
+
+<a href="#installation"><img src="https://raw.githubusercontent.com/avelino/awesome-go/main/.github/assets/github.svg" alt="GitHub" width="20" height="20"></a>
 
 1. Install CAM: `curl -fsSL https://raw.githubusercontent.com/Chat2AnyLLM/code-assistant-manager/main/install.sh | bash`
 2. `cam agent fetch`
@@ -12,8 +16,13 @@ A curated collection of **481** Claude agents from various repositories and sour
 
 ## Table of Contents
 
+<details>
+<summary>Expand contents</summary>
+
 - [General](#general)
 - [specialized/python](#specializedpython)
+
+</details>
 
 ## General
 
@@ -496,6 +505,8 @@ A curated collection of **481** Claude agents from various repositories and sour
 | [orchestrator](https://github.com/CloudAI-X/claude-workflow-v2/blob/main/agents/orchestrator.md) | You are a senior software architect and project coordinator. Your role is to break down complex task... | opus | [CloudAI-X/claude-workflow-v2](https://github.com/CloudAI-X/claude-workflow-v2) |
 | [security-auditor](https://github.com/CloudAI-X/claude-workflow-v2/blob/main/agents/security-auditor.md) | You are a security engineer specializing in application security, vulnerability detection, and secur... | sonnet | [CloudAI-X/claude-workflow-v2](https://github.com/CloudAI-X/claude-workflow-v2) |
 
+[⬆ back to top](#table-of-contents)
+
 ## specialized/python
 
 | Agent | Description | Model | Repository |
@@ -506,6 +517,20 @@ A curated collection of **481** Claude agents from various repositories and sour
 | [Python Performance Expert](https://github.com/vijaythecoder/awesome-claude-agents/blob/main/agents/specialized/python/performance-expert.md) | I am a specialized Python performance expert with deep knowledge of: | - | [vijaythecoder/awesome-claude-agents](https://github.com/vijaythecoder/awesome-claude-agents) |
 | [Python Testing Expert](https://github.com/vijaythecoder/awesome-claude-agents/blob/main/agents/specialized/python/testing-expert.md) | I am a specialized Python testing expert with comprehensive knowledge of: | - | [vijaythecoder/awesome-claude-agents](https://github.com/vijaythecoder/awesome-claude-agents) |
 
+[⬆ back to top](#table-of-contents)
+
 ---
+
+## Contributing
+
+<a href="#contributing"><img src="https://raw.githubusercontent.com/avelino/awesome-go/main/.github/assets/github.svg" alt="GitHub" width="20" height="20"></a>
+
+Found an awesome Claude agent? [Submit a pull request](https://github.com/vijaythecoder/awesome-claude-agents/pulls) to add it to this list!
+
+## License
+
+<a href="#license"><img src="https://raw.githubusercontent.com/avelino/awesome-go/main/.github/assets/github.svg" alt="GitHub" width="20" height="20"></a>
+
+This list is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
 
 *This README is automatically generated from agent repository sources.*
