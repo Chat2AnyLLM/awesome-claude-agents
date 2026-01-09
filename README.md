@@ -2,9 +2,9 @@
 
 ![Awesome](https://awesome.re/badge.svg)
 
-A curated collection of **481** Claude agents from various repositories and sources.
+A curated collection of **488** Claude agents from various repositories and sources.
 
-**Last updated:** 2026-01-09 15:31 UTC
+**Last updated:** 2026-01-09 16:37 UTC
 
 ## Installation
 
@@ -199,6 +199,13 @@ A curated collection of **481** Claude agents from various repositories and sour
 | [seo-content-planner](https://github.com/wshobson/agents/blob/main/plugins/seo-content-creation/agents/seo-content-planner.md) | You are an SEO content strategist creating comprehensive content plans and outlines. | haiku | [wshobson/agents](https://github.com/wshobson/agents) |
 | [seo-content-auditor](https://github.com/wshobson/agents/blob/main/plugins/seo-content-creation/agents/seo-content-auditor.md) | You are an SEO content auditor analyzing provided content for optimization opportunities. | sonnet | [wshobson/agents](https://github.com/wshobson/agents) |
 | [arm-cortex-expert](https://github.com/wshobson/agents/blob/main/plugins/arm-cortex-microcontrollers/agents/arm-cortex-expert.md) | - Deliver **complete, compilable firmware and driver modules** for ARM Cortex-M platforms. - Impleme... | inherit | [wshobson/agents](https://github.com/wshobson/agents) |
+| [firmware-analyst](https://github.com/wshobson/agents/blob/main/plugins/reverse-engineering/agents/firmware-analyst.md) | You are an elite firmware analyst with deep expertise in embedded systems security, IoT device analy... | opus | [wshobson/agents](https://github.com/wshobson/agents) |
+| [malware-analyst](https://github.com/wshobson/agents/blob/main/plugins/reverse-engineering/agents/malware-analyst.md) | You are an elite malware analyst focused on defensive security research. Your purpose is to help sec... | opus | [wshobson/agents](https://github.com/wshobson/agents) |
+| [reverse-engineer](https://github.com/wshobson/agents/blob/main/plugins/reverse-engineering/agents/reverse-engineer.md) | You are an elite reverse engineer with deep expertise in software analysis, binary reverse engineeri... | opus | [wshobson/agents](https://github.com/wshobson/agents) |
+| [protocol-reverse-engineering](https://github.com/wshobson/agents/blob/main/plugins/reverse-engineering/skills/protocol-reverse-engineering/SKILL.md) | Comprehensive techniques for capturing, analyzing, and documenting network protocols for security re... | - | [wshobson/agents](https://github.com/wshobson/agents) |
+| [anti-reversing-techniques](https://github.com/wshobson/agents/blob/main/plugins/reverse-engineering/skills/anti-reversing-techniques/SKILL.md) | > **AUTHORIZED USE ONLY**: This skill contains dual-use security techniques. Before proceeding with... | - | [wshobson/agents](https://github.com/wshobson/agents) |
+| [memory-forensics](https://github.com/wshobson/agents/blob/main/plugins/reverse-engineering/skills/memory-forensics/SKILL.md) | Comprehensive techniques for acquiring, analyzing, and extracting artifacts from memory dumps for in... | - | [wshobson/agents](https://github.com/wshobson/agents) |
+| [binary-analysis-patterns](https://github.com/wshobson/agents/blob/main/plugins/reverse-engineering/skills/binary-analysis-patterns/SKILL.md) | Comprehensive patterns and techniques for analyzing compiled binaries, understanding assembly code,... | - | [wshobson/agents](https://github.com/wshobson/agents) |
 | [Code Migrate](https://github.com/wshobson/agents/blob/main/plugins/framework-migration/commands/code-migrate.md) | You are a code migration expert specializing in transitioning codebases between frameworks, language... | - | [wshobson/agents](https://github.com/wshobson/agents) |
 | [Legacy Modernize](https://github.com/wshobson/agents/blob/main/plugins/framework-migration/commands/legacy-modernize.md) | Orchestrate a comprehensive legacy system modernization using the strangler fig pattern, enabling gr... | - | [wshobson/agents](https://github.com/wshobson/agents) |
 | [Deps Upgrade](https://github.com/wshobson/agents/blob/main/plugins/framework-migration/commands/deps-upgrade.md) | You are a dependency management expert specializing in safe, incremental upgrades of project depende... | - | [wshobson/agents](https://github.com/wshobson/agents) |
