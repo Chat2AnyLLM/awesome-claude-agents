@@ -2,9 +2,11 @@ name: Update README
 
 on:
   schedule:
-    # Run every hour at minute 0
+    # Run hourly
     - cron: '0 * * * *'
   workflow_dispatch: # Allow manual triggering
+  repository_dispatch:
+    types: [config-updated]
 
 jobs:
   update-readme:
