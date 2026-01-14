@@ -2,9 +2,9 @@
 
 ![Awesome](https://awesome.re/badge.svg)
 
-A curated collection of **488** Claude agents from various repositories and sources.
+A curated collection of **500** Claude agents from various repositories and sources.
 
-**Last updated:** 2026-01-13 23:25 UTC
+**Last updated:** 2026-01-14 02:23 UTC
 
 ## Installation
 
@@ -190,6 +190,18 @@ A curated collection of **488** Claude agents from various repositories and sour
 | [dx-optimizer](https://github.com/wshobson/agents/blob/main/plugins/team-collaboration/agents/dx-optimizer.md) | You are a Developer Experience (DX) optimization specialist. Your mission is to reduce friction, aut... | sonnet | [wshobson/agents](https://github.com/wshobson/agents) |
 | [Config Validate](https://github.com/wshobson/agents/blob/main/plugins/deployment-validation/commands/config-validate.md) | You are a configuration management expert specializing in validating, testing, and ensuring the corr... | - | [wshobson/agents](https://github.com/wshobson/agents) |
 | [cloud-architect](https://github.com/wshobson/agents/blob/main/plugins/deployment-validation/agents/cloud-architect.md) | You are a cloud architect specializing in scalable, cost-effective, and secure multi-cloud infrastru... | sonnet | [wshobson/agents](https://github.com/wshobson/agents) |
+| [Readme](https://github.com/wshobson/agents/blob/main/plugins/startup-business-analyst/README.md) | Comprehensive business analysis plugin specialized for early-stage startups, providing market sizing... | - | [wshobson/agents](https://github.com/wshobson/agents) |
+| [financial-projections](https://github.com/wshobson/agents/blob/main/plugins/startup-business-analyst/commands/financial-projections.md) | Create a comprehensive 3-5 year financial model with revenue projections, cost structure, headcount... | - | [wshobson/agents](https://github.com/wshobson/agents) |
+| [market-opportunity](https://github.com/wshobson/agents/blob/main/plugins/startup-business-analyst/commands/market-opportunity.md) | Generate a comprehensive market opportunity analysis for a startup, including Total Addressable Mark... | - | [wshobson/agents](https://github.com/wshobson/agents) |
+| [business-case](https://github.com/wshobson/agents/blob/main/plugins/startup-business-analyst/commands/business-case.md) | Generate a comprehensive, investor-ready business case document covering market opportunity, solutio... | - | [wshobson/agents](https://github.com/wshobson/agents) |
+| [startup-analyst](https://github.com/wshobson/agents/blob/main/plugins/startup-business-analyst/agents/startup-analyst.md) | You are an expert startup business analyst specializing in helping early-stage companies (pre-seed t... | inherit | [wshobson/agents](https://github.com/wshobson/agents) |
+| [competitive-landscape](https://github.com/wshobson/agents/blob/main/plugins/startup-business-analyst/skills/competitive-landscape/SKILL.md) | Comprehensive frameworks for analyzing competition, identifying differentiation opportunities, and d... | - | [wshobson/agents](https://github.com/wshobson/agents) |
+| [startup-metrics-framework](https://github.com/wshobson/agents/blob/main/plugins/startup-business-analyst/skills/startup-metrics-framework/SKILL.md) | Comprehensive guide to tracking, calculating, and optimizing key performance metrics for different s... | - | [wshobson/agents](https://github.com/wshobson/agents) |
+| [startup-financial-modeling](https://github.com/wshobson/agents/blob/main/plugins/startup-business-analyst/skills/startup-financial-modeling/SKILL.md) | Build comprehensive 3-5 year financial models with revenue projections, cost structures, cash flow a... | - | [wshobson/agents](https://github.com/wshobson/agents) |
+| [team-composition-analysis](https://github.com/wshobson/agents/blob/main/plugins/startup-business-analyst/skills/team-composition-analysis/SKILL.md) | Design optimal team structures, hiring plans, compensation strategies, and equity allocation for ear... | - | [wshobson/agents](https://github.com/wshobson/agents) |
+| [market-sizing-analysis](https://github.com/wshobson/agents/blob/main/plugins/startup-business-analyst/skills/market-sizing-analysis/SKILL.md) | Comprehensive market sizing methodologies for calculating Total Addressable Market (TAM), Serviceabl... | - | [wshobson/agents](https://github.com/wshobson/agents) |
+| [Data Sources](https://github.com/wshobson/agents/blob/main/plugins/startup-business-analyst/skills/market-sizing-analysis/references/data-sources.md) | Curated list of credible sources for market research and sizing analysis. | - | [wshobson/agents](https://github.com/wshobson/agents) |
+| [Saas Market Sizing](https://github.com/wshobson/agents/blob/main/plugins/startup-business-analyst/skills/market-sizing-analysis/examples/saas-market-sizing.md) | Complete TAM/SAM/SOM calculation for a B2B SaaS startup using bottom-up and top-down methodologies. | - | [wshobson/agents](https://github.com/wshobson/agents) |
 | [payment-integration](https://github.com/wshobson/agents/blob/main/plugins/payment-processing/agents/payment-integration.md) | You are a payment integration specialist focused on secure, reliable payment processing. | sonnet | [wshobson/agents](https://github.com/wshobson/agents) |
 | [billing-automation](https://github.com/wshobson/agents/blob/main/plugins/payment-processing/skills/billing-automation/SKILL.md) | Master automated billing systems including recurring billing, invoice generation, dunning management... | - | [wshobson/agents](https://github.com/wshobson/agents) |
 | [stripe-integration](https://github.com/wshobson/agents/blob/main/plugins/payment-processing/skills/stripe-integration/SKILL.md) | Master Stripe payment processing integration for robust, PCI-compliant payment flows including check... | - | [wshobson/agents](https://github.com/wshobson/agents) |
