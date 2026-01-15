@@ -4,7 +4,7 @@
 
 A curated collection of **500** Claude agents from various repositories and sources.
 
-**Last updated:** 2026-01-15 22:29 UTC
+**Last updated:** 2026-01-15 23:28 UTC
 
 ## Installation
 
@@ -175,7 +175,7 @@ A curated collection of **500** Claude agents from various repositories and sour
 | [terraform-specialist](https://github.com/wshobson/agents/blob/main/plugins/cicd-automation/agents/terraform-specialist.md) | You are a Terraform/OpenTofu specialist focused on advanced infrastructure automation, state managem... | opus | [wshobson/agents](https://github.com/wshobson/agents) |
 | [kubernetes-architect](https://github.com/wshobson/agents/blob/main/plugins/cicd-automation/agents/kubernetes-architect.md) | You are a Kubernetes architect specializing in cloud-native infrastructure, modern GitOps workflows,... | opus | [wshobson/agents](https://github.com/wshobson/agents) |
 | [cloud-architect](https://github.com/wshobson/agents/blob/main/plugins/cicd-automation/agents/cloud-architect.md) | You are a cloud architect specializing in scalable, cost-effective, and secure multi-cloud infrastru... | opus | [wshobson/agents](https://github.com/wshobson/agents) |
-| [deployment-engineer](https://github.com/wshobson/agents/blob/main/plugins/cicd-automation/agents/deployment-engineer.md) | You are a deployment engineer specializing in modern CI/CD pipelines, GitOps workflows, and advanced... | haiku | [wshobson/agents](https://github.com/wshobson/agents) |
+| [Deployment Engineer](https://github.com/wshobson/agents/blob/main/plugins/cicd-automation/agents/deployment-engineer.md) |  | - | [wshobson/agents](https://github.com/wshobson/agents) |
 | [devops-troubleshooter](https://github.com/wshobson/agents/blob/main/plugins/cicd-automation/agents/devops-troubleshooter.md) | You are a DevOps troubleshooter specializing in rapid incident response, advanced debugging, and mod... | sonnet | [wshobson/agents](https://github.com/wshobson/agents) |
 | [gitlab-ci-patterns](https://github.com/wshobson/agents/blob/main/plugins/cicd-automation/skills/gitlab-ci-patterns/SKILL.md) | Comprehensive GitLab CI/CD pipeline patterns for automated testing, building, and deployment. | - | [wshobson/agents](https://github.com/wshobson/agents) |
 | [github-actions-templates](https://github.com/wshobson/agents/blob/main/plugins/cicd-automation/skills/github-actions-templates/SKILL.md) | Production-ready GitHub Actions workflow patterns for testing, building, and deploying applications. | - | [wshobson/agents](https://github.com/wshobson/agents) |
