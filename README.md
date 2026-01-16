@@ -2,9 +2,9 @@
 
 ![Awesome](https://awesome.re/badge.svg)
 
-A curated collection of **526** Claude agents from various repositories and sources.
+A curated collection of **527** Claude agents from various repositories and sources.
 
-**Last updated:** 2026-01-16 16:38 UTC
+**Last updated:** 2026-01-16 17:30 UTC
 
 ## Installation
 
@@ -82,6 +82,7 @@ A curated collection of **526** Claude agents from various repositories and sour
 | [Revert](https://github.com/wshobson/agents/blob/main/plugins/conductor/commands/revert.md) | Revert changes by logical work unit with full git awareness. Supports reverting entire tracks, speci... | - | [wshobson/agents](https://github.com/wshobson/agents) |
 | [Status](https://github.com/wshobson/agents/blob/main/plugins/conductor/commands/status.md) | Display the current status of the Conductor project, including overall progress, active tracks, and... | - | [wshobson/agents](https://github.com/wshobson/agents) |
 | [Setup](https://github.com/wshobson/agents/blob/main/plugins/conductor/commands/setup.md) | Initialize or resume Conductor project setup. This command creates foundational project documentatio... | - | [wshobson/agents](https://github.com/wshobson/agents) |
+| [Manage](https://github.com/wshobson/agents/blob/main/plugins/conductor/commands/manage.md) | Manage the complete track lifecycle including archiving, restoring, deleting, renaming, and cleaning... | - | [wshobson/agents](https://github.com/wshobson/agents) |
 | [conductor-validator](https://github.com/wshobson/agents/blob/main/plugins/conductor/agents/conductor-validator.md) | You are an expert validator for Conductor project artifacts. Your role is to verify that Conductor's... | opus | [wshobson/agents](https://github.com/wshobson/agents) |
 | [Track Plan](https://github.com/wshobson/agents/blob/main/plugins/conductor/templates/track-plan.md) | **Track ID:** {{TRACK_ID}} **Spec:** [spec.md](./spec.md) **Estimated Effort:** {{EFFORT_ESTIMATE}}... | - | [wshobson/agents](https://github.com/wshobson/agents) |
 | [Product](https://github.com/wshobson/agents/blob/main/plugins/conductor/templates/product.md) | **Name:** {{PRODUCT_NAME}} | - | [wshobson/agents](https://github.com/wshobson/agents) |
