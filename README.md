@@ -598,6 +598,8 @@ A curated collection of **572** Claude agents from various repositories and sour
 
 [⬆ back to top](#table-of-contents)
 
+| [openpaw](https://github.com/daxaur/openpaw) | Open-source CLI tool (npx pawmode) that turns Claude Code into a personal assistant with 38 skills including Telegram, Discord, Obsidian, daily briefings. No daemon, no cloud, MIT licensed. | - | [daxaur/openpaw](https://github.com/daxaur/openpaw) |
+
 ## specialized/python
 
 | Agent | Description | Model | Repository |
