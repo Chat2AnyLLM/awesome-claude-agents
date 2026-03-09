@@ -28,6 +28,7 @@ A curated collection of **572** Claude agents from various repositories and sour
 
 | Agent | Description | Model | Repository |
 |-------|-------------|-------|------------|
+| [x-twitter-scraper](https://github.com/Xquik-dev/x-twitter-scraper) | X/Twitter data extraction skill with MCP server, REST API, and 20 extraction tools for profiles, tweets, followers, and more. | - | [Xquik-dev/x-twitter-scraper](https://github.com/Xquik-dev/x-twitter-scraper) |
 | [vibe-coding-coach](https://github.com/iannuttall/claude-agents/blob/main/agents/vibe-coding-coach.md) | Use this agent when users want to build applications through conversation, focusing on the vision an... | - | [iannuttall/claude-agents](https://github.com/iannuttall/claude-agents) |
 | [code-refactorer](https://github.com/iannuttall/claude-agents/blob/main/agents/code-refactorer.md) | Use this agent when you need to improve existing code structure, readability, or maintainability wit... | - | [iannuttall/claude-agents](https://github.com/iannuttall/claude-agents) |
 | [project-task-planner](https://github.com/iannuttall/claude-agents/blob/main/agents/project-task-planner.md) | Use this agent when you need to create a comprehensive development task list from a Product Requirem... | - | [iannuttall/claude-agents](https://github.com/iannuttall/claude-agents) |
