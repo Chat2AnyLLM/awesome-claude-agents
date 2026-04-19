@@ -612,6 +612,9 @@ A curated collection of **572** Claude agents from various repositories and sour
 
 ---
 
+| [Agent Shadow Brain](https://github.com/theihtisham/agent-shadow-brain) | Self-evolving AI coding intelligence with infinite memory (TurboQuant), genetic algorithm self-evolution, predictive bug detection, PageRank knowledge graphs, swarm intelligence, and adversarial defense. | Claude/Custom | [theihtisham/agent-shadow-brain](https://github.com/theihtisham/agent-shadow-brain) |
+| [Omni Skills Forge](https://github.com/theihtisham/omni-skills-forge) | 50,000+ curated AI agent skills for Claude Code, Cursor, Copilot, Windsurf, Cline. Visual dashboard, one-click install, skill doctor, auto-update. | Multi-LLM | [theihtisham/omni-skills-forge](https://github.com/theihtisham/omni-skills-forge) |
+
 ## Contributing
 
 <a href="#contributing"><img src="https://raw.githubusercontent.com/avelino/awesome-go/main/.github/assets/github.svg" alt="GitHub" width="20" height="20"></a>
