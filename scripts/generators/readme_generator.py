@@ -102,7 +102,7 @@ class ReadmeGenerator:
         content.append("")
         content.append('<a href="#contributing"><img src="https://raw.githubusercontent.com/avelino/awesome-go/main/.github/assets/github.svg" alt="GitHub" width="20" height="20"></a>')
         content.append("")
-        content.append("Found an awesome Claude agent? [Submit a pull request](https://github.com/vijaythecoder/awesome-claude-agents/pulls) to add it to this list!")
+        content.append("Want to contribute a new agent config? Head over to [Chat2AnyLLM/awesome-repo-configs](https://github.com/Chat2AnyLLM/awesome-repo-configs) and add it to the corresponding config file there.")
         content.append("")
         content.append("## License")
         content.append("")
