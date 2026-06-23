@@ -10,7 +10,7 @@ A curated collection of **572** Claude agents from various repositories and sour
 
 <a href="#installation"><img src="https://raw.githubusercontent.com/avelino/awesome-go/main/.github/assets/github.svg" alt="GitHub" width="20" height="20"></a>
 
-1. Install CAM: `curl -fsSL https://raw.githubusercontent.com/Chat2AnyLLM/code-assistant-manager/main/install.sh | bash`
+1. Install CAM: `curl -fsSL https://raw.githubusercontent.com/Chat2AnyLLM/code-agent-manager/main/install.sh | bash`
 2. `cam agent fetch`
 3. `cam agent install security-auditor`
 
