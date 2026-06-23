@@ -33,6 +33,8 @@ jobs:
     - name: Generate README
       run: |
         python -m scripts.agent_scraper generate-readme --output README.md
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Check for changes
       id: verify-changed-files
